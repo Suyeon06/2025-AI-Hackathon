@@ -1,12 +1,12 @@
 import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const [page, wherePage] = useState(1);
+
   return (
     <div className="flex justify-center items-center w-screen h-screen bg-gray-200">
-      {/* 세로형 9:16 비율 키오스크 화면 */}
       <div className="w-[360px] h-[640px] flex">
-        {/* 사이드바 */}
-        {/* 사이드바 */}
         <div className="w-1/5 h-full bg-[#FFC915] flex flex-col justify-center">
           <div className="h-1/2 text-[9px] rounded-2xl bg-[#484848] flex flex-col justify-end items-center p-1 space-y-2">
             <button className="bg-white text-black font-bold">직원 호출</button>
@@ -26,16 +26,16 @@ function App() {
           <div className="flex gap-4">
             {/* 먹고 가기 버튼 */}
             <button
-              className="w-32 h-20 text-xl font-semibold rounded-xl"
-              style={{ backgroundColor: "#000000", color: "#FFC915" }}
+              className="w-32 h-20 text-xl font-semibold rounded-xl bg-black text-[#FFC915]"
+              onClick={() => wherePage(1)}
             >
               먹고 가기
             </button>
 
             {/* 가져 가기 버튼 */}
             <button
-              className="w-32 h-20 text-xl font-semibold rounded-xl"
-              style={{ backgroundColor: "#FFC915", color: "#000000" }}
+              className="w-32 h-20 text-xl font-semibold rounded-xl bg-[#FFC915] text-white"
+              onClick={() => wherePage(2)}
             >
               가져 가기
             </button>
