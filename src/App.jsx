@@ -26,7 +26,8 @@ function App() {
           <div className="flex gap-4">
             {/* 먹고 가기 버튼 */}
             <button
-              className="w-32 h-20 text-xl font-semibold rounded-xl bg-black text-[#FFC915]"
+              className="w-32 h-20 text-xl font-semibold rounded-xl"
+              style={{ backgroundColor: "#000000", color: "#FFC915" }}
               onClick={() => wherePage(1)}
             >
               먹고 가기
@@ -34,7 +35,8 @@ function App() {
 
             {/* 가져 가기 버튼 */}
             <button
-              className="w-32 h-20 text-xl font-semibold rounded-xl bg-[#FFC915] text-white"
+              className="w-32 h-20 text-xl font-semibold rounded-xl"
+              style={{ backgroundColor: "#FFC915", color: "#000000" }}
               onClick={() => wherePage(2)}
             >
               가져 가기
